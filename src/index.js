@@ -1,11 +1,19 @@
 "use strict";
 
 /**
+ * @typedef {Object} PaginationResult
+ * @property {number} skip - The number of records to skip.
+ * @property {number} pageSize - The number of records per page.
+ * @property {number} pageNumber - The current page number (1-based).
+ * @property {number} totalPages - The total number of pages.
+ */
+
+/**
  * Evaluates pagination parameters.
  * @param {number} pageNumber - The current page number (1-based).
  * @param {number} pageSize - The number of records per page.
  * @param {number} totalRecords - The total number of records.
- * @returns {Object} An object containing skip, pageSize, pageNumber, and totalPages.
+ * @returns {PaginationResult} The pagination parameters.
  * @throws Will throw an error if pageSize < 1 or if pageNumber results in negative skip.
  */
 const evaluatePagination = (pageNumber = 1, pageSize = 10, totalRecords = 0) => {
