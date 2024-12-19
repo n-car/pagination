@@ -1,6 +1,6 @@
 "use strict";
 
-const evaluatePagination = (pageNumber, pageSize, totalItems) => {
+const evaluatePagination = (pageNumber, pageSize, totalRecords) => {
     if (pageSize < 1) throw new Error(`Invalid page size: ${pageSize}`);
     const skip = (pageNumber - 1) * pageSize;
     if (skip < 0) throw new Error(`Invalid page number: ${pageNumber}`);
