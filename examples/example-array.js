@@ -29,7 +29,7 @@ const getItemsPaginated = (pageNumber, pageSize) => {
         };
 
     } catch (error) {
-        throw new NestedError(`TubesManager.getTubesPaginated()`, error);
+        throw new NestedError(`getItemsPaginated()`, error);
     }
 }
 
